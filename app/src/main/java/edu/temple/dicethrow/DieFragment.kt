@@ -9,6 +9,7 @@ import android.widget.TextView
 import kotlin.random.Random
 
 const val DIESIDE = "sidenumber"
+
 class DieFragment : Fragment() {
     lateinit var dieTextView: TextView
 
@@ -36,9 +37,9 @@ class DieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         throwDie()
-        view.setOnClickListener{
+        /*view.setOnClickListener{
             throwDie()
-        }
+        }*/
     }
 
     fun throwDie() {
