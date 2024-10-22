@@ -41,13 +41,11 @@ class DieFragment : Fragment() {
         savedInstanceState?.run {
             diceThrow = getInt(KEY)
         }
+        // either throw a new die or show the old die's value
         if (diceThrow == 0)
             throwDie()
         else
             dieTextView.text = diceThrow.toString()
-        /*view.setOnClickListener{
-            throwDie()
-        }*/
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
