@@ -10,9 +10,6 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
         setContentView(R.layout.activity_main)
 
         val fragment = DieFragment.newInstance(100)
-        /*findViewById<Button>(R.id.rollDiceButton).setOnClickListener {
-            (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
-        }*/
 
         if (supportFragmentManager.findFragmentById(R.id.dieContainer) !is DieFragment) {
         supportFragmentManager
@@ -23,6 +20,6 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
     }
 
     override fun buttonClicked() {
-        TODO("Not yet implemented")
+        (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
     }
 }
